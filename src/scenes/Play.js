@@ -117,6 +117,25 @@ class Play extends Phaser.Scene {
         // temporarily hide ship
         ship.alpha = 0
         // create explosion sprite at ship's position
+        let explode = this.add.particles(ship.x, ship.y, 'explosion_particle', {
+            lifespan: 1500,
+            speed: { min: 75, max: 75 },
+            scale: { start: 2, end: 2 },
+            gravityY: 0,
+            //blendMode: 'ADD',
+            //emitting: false
+
+        });
+
+        explode.explode(15);
+        explode.stop(false);
+        explode.on('complete', () => {   // callback after anim completes
+            ship.reset()                         // reset ship position
+            ship.alpha = 1                       // make ship visible again
+            //explode.destroy()                       // remove explosion sprite
+          })
+
+        /*
         let boom = this.add.sprite(ship.x, ship.y, 'explosion').setOrigin(0, 0);
         boom.anims.play('explode')             // play explode animation
         boom.on('animationcomplete', () => {   // callback after anim completes
@@ -124,6 +143,7 @@ class Play extends Phaser.Scene {
           ship.alpha = 1                       // make ship visible again
           boom.destroy()                       // remove explosion sprite
         })
+          */
         this.p1Score += ship.points
         this.scoreLeft.text = this.p1Score     
         this.sound.play('sfx-explosion')   
