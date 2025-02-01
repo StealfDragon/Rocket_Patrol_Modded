@@ -3,10 +3,12 @@ Cassian Jones
 Rocket Patrol Reanimated VII: Eclectic Hullabaloo
 Insert Time Here
 Mods Included:
-New Enemy Spaceship (5 Points)
-Alternate Timing/Scoring Mechanism (5 Points)
-Mouse Control For Movement and Fire (5 Points)
-New Explosion Effect (5 Points)
+New Enemy Spaceship (5 Points) (30 minutes)
+Parallax Scrolling For Background (3 Points) (15 minutes)
+Display Time (3 Points) (3 hours)
+Alternate Timing/Scoring Mechanism (5 Points) (2 hours)
+New Explosion Effect (5 Points) (2 Hours)
+Total Time: Actual time: Many days | Time not including procrastination: ~8
 */
 
 let config = {

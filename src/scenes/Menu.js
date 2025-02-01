@@ -7,7 +7,10 @@ class Menu extends Phaser.Scene {
         this.load.image('rocket', './assets/rocket.png')
         this.load.image('spaceship', './assets/spaceship.png')
         this.load.image('starfield', './assets/starfield.png')
+        this.load.image('farspace', './assets/RP_CustomBackground.png')
+        this.load.image('closespace', './assets/RP_BigStars.png')
         this.load.image('explosion_particle', './assets/Explosion_Particle.png')
+        this.load.image('X-Wing', './assets/RP_X-Wing.png')
         this.load.spritesheet('explosion', './assets/explosion.png', {
             frameWidth: 64,
             frameHeight: 32,
@@ -59,6 +62,7 @@ class Menu extends Phaser.Scene {
           // easy mode
           game.settings = {
             spaceshipSpeed: 3,
+            XWingSpeed: 6,
             gameTimer: 60000    
           }
           this.sound.play('sfx-select')
